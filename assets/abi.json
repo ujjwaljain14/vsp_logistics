@@ -1,0 +1,752 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "payable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "Manufactured",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "ManufacturerAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReceivedByCasting",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReceivedByConverter",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReceivedByLF_1",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReceivedByLF_2",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReceivedByRH",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByCasting",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByConverter",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByLF_1",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByLF_2",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByRH",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "ShippedByTLC",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "LastTime",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addCastingRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addConverterRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addLF_1Role",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addLF_2Role",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addRHRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "addTLCRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_add",
+        "type": "string"
+      }
+    ],
+    "name": "fetchCLnt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256[10]",
+        "name": "",
+        "type": "uint256[10]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "fetchLadleHistory",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "uid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "enum Structure.State",
+            "name": "ladleState",
+            "type": "uint8"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "manufacturer",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "manufacturedDate",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.TLCDetails",
+            "name": "manufacturer",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "converter",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shipConverterDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "recConverterDate",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.ConverterDetails",
+            "name": "conv",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "ladleNumber",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.LadleDetails",
+            "name": "ladledet",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "lf_1",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shipLf_1Date",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "recLf_1Date",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.LF_1_Details",
+            "name": "lf1",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "lf_2",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shipLf_2Date",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "recLf_2Date",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.LF_2_Details",
+            "name": "lf2",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "rh",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shipRhDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "recRhDate",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.RH_Details",
+            "name": "rh",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "castingM",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "shipCastingDate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "recCastingDate",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Structure.Casting_Details",
+            "name": "castingM",
+            "type": "tuple"
+          },
+          {
+            "internalType": "string",
+            "name": "transaction",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Structure.Ladle[]",
+        "name": "",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "enum Structure.State",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasCastingRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasConverterRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasLF_1Role",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasLF_2Role",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRHRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+      }
+    ],
+    "name": "hasTLCRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "productCode",
+        "type": "uint256"
+      }
+    ],
+    "name": "manufactureLadle",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "receiveByCastingMachine",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "receiveByConverter",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "receiveByLF_1",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "receiveByLF_2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "receiveByRH",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "shipByRH",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "shipToConverter",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "shipToLF_1",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "shipToLF_2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_uid",
+        "type": "uint256"
+      }
+    ],
+    "name": "shipToRH",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "uid",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
